@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express1' });
 });
 router.get('/mongooseTest',function(req,res,next){
   mongoose.connect('mongodb://localhost/pets',{ useNewUrlParser: true});

@@ -1,0 +1,60 @@
+@url = http://localhost:3000
+@json = Content-Type: application/json
+
+
+###
+post {{url}}/users/register
+{{json}}
+
+{
+    "username":"test",
+    "password":"test",
+    "userMail":"test@163.com",
+    "userPhone":"12345678910",
+    "userAdmin":0,
+    "userPower":0,
+    "userStop":0
+}
+
+###
+post {{url}}/users/login
+{{json}}
+
+{
+    "username":"test1",
+    "password":"test"
+}
+
+###
+post {{url}}/users/findPassword
+{{json}}
+
+{
+    "username":"test1",
+    "userMail":"test@163.com",
+    "userPhone":"12345678910",
+    "repassword":"33333333",
+    "password":"123456",
+    "token":"f64bacd95127ffbdf1239e0ebc0d8a63",
+    "user_id":"5ccd9b64c4d3cf1868b7d3a6"
+}
+
+###
+post {{url}}/users/postComment
+{{json}}
+
+{
+    "username":"test1",
+    "movie_id":"464414548w545452",
+    "context":"这是一条测试评论数据",
+    "check":0
+}
+
+###
+post {{url}}/users/support
+{{json}}
+
+{
+    "movie_id":"464414548w545452",
+    "movieNumSuppose":1
+}
